@@ -2,7 +2,6 @@
 #https://www.w3resource.com/python-exercises/tkinter/python-tkinter-basic-exercise-13.php
 
 import tkinter as tk
-import argparse
 from math import factorial
 
 # Function to update the display
