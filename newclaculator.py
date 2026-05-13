@@ -44,8 +44,8 @@ display_var.set("0")
 display_label = tk.Label(parent, textvariable=display_var, font=("Arial", 24), anchor="e", bg="lightgray", padx=10, pady=10)
 display_label.grid(row=0, column=0, columnspan=4)
 
-pi = 3.14159
-exp = 2.71828
+pi = 3.14159265358979
+exp = 2.718281828459
 
 button_layout = [
 	("0", 5, 0), (".", 5, 2), ("/", 5, 3), ("exp", 5, 4), ("**2", 5, 5), ("=", 6, 3),
