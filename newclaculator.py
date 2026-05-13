@@ -1,5 +1,6 @@
-
-#https://www.w3resource.com/python-exercises/tkinter/python-tkinter-basic-exercise-13.php
+#File: newcalculator
+#Purpose: Simple number calculator
+#Author: jrom876
 
 import tkinter as tk
 from math import factorial
