@@ -3,9 +3,10 @@
 #Author:  Jacob Romero, jrom876
 
 '''
-	Copyright (C) 4/28/2024 
+	Copyright (C) 5/12/2026 
 	Jacob Romero, Creative Engineering Solutions, LLC
 	cesllc876@gmail.com
+	jrom876@gmail.com
  
 	This program is free software; you can redistribute it
 	and/or modify it under the terms of the GNU General Public  
@@ -22,8 +23,6 @@
 	The Free Software Foundation, Inc.
 	59 Temple Place, Suite 330
 	Boston, MA 02111-1307 USA
- 
-	References:	
 		
 '''
 
