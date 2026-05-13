@@ -24,6 +24,7 @@ def calculate_result():
     except Exception as e:
         display_var.set("Error")
 
+# Function to calculate the Factorial of a number
 def fac(): 
 	try: 
 	   result = factorial(int(display_var.get())) 
