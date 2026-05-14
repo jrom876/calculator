@@ -49,7 +49,6 @@ def calculate_result():
     except Exception as e:
         display_var.set("Error")
 
-# Function to calculate the Factorial of a number
 def fac(): 
 	try: 
 	   result = factorial(int(display_var.get())) 
@@ -57,6 +56,18 @@ def fac():
 	   display_var.set(result) 
 	except Exception as e: 
 	   clear_display()
+
+def undo():  
+	if len(display_var.get()): 
+	   new_string = display_var.get()[:-1] 
+	   clear_display() 
+	   display_var.set(new_string) 
+	   if not len(display_var.get()):
+		   display_var.set("0")
+	else: 
+		clear_display() 
+		display_var.set("Error") 
+            
 
 # Create the main window
 parent = tk.Tk()
@@ -74,12 +85,12 @@ pi = 3.14159265358979
 exp = 2.718281828459
 
 button_layout = [
-	("0", 5, 0), (".", 5, 2), ("/", 5, 3), ("exp", 5, 4), ("**2", 5, 5), ("=", 6, 3),
-    ("7", 4, 0),  ("8", 4, 1), ("9", 4, 2), ("*", 4, 3),  ("(", 4, 4),  (")",  4, 5), 
-    ("4", 3, 0),  ("5", 3, 1), ("6", 3, 2), ("-", 3, 3),  ("%", 3, 4),  ("**", 2, 5),
-    ("1", 2, 0),  ("2", 2, 1), ("3", 2, 2), ("+", 2, 3),  ("pi",2, 4),       
+	("0", 5, 1),  (".", 5, 2), ("/", 5, 3), ("exp", 5, 4), ("**2", 5, 5), ("=", 6, 2),
+    ("7", 4, 0),  ("8", 4, 1), ("9", 4, 2), ("*", 4, 3),   ("(", 4, 4),   (")",  4, 5), 
+    ("4", 3, 0),  ("5", 3, 1), ("6", 3, 2), ("-", 3, 3),   ("%", 3, 4),   ("**", 2, 5),
+    ("1", 2, 0),  ("2", 2, 1), ("3", 2, 2), ("+", 2, 3),   ("pi",2, 4),      
 ] 
-
+#("<-", 6, 3), 
 # Create and place the buttons
 for (text, row, col) in button_layout:
     button = tk.Button(parent, text=text, padx=20, pady=20, font=("Arial", 18),
@@ -88,11 +99,15 @@ for (text, row, col) in button_layout:
 
 # Create a Clear button
 clear_button = tk.Button(parent, text="C", padx=20, pady=20, font=("Arial", 18), command=clear_display)
-clear_button.grid(row=5, column=0, columnspan=3)
+clear_button.grid(row=6, column=0, columnspan=3)
 
 # Create a Factorial button
 factorial_button = tk.Button(parent, text="x!", padx=20, pady=20, font=("Arial", 18), command=fac)
 factorial_button.grid(row=3, column=5, columnspan=3)
+
+# Create an Undo button
+undo_button = tk.Button(parent, text="<-", padx=20, pady=20, font=("Arial", 18), command=undo)
+undo_button.grid(row=6, column=3, columnspan=3)
 
 # Start the Tkinter event loop
 parent.mainloop()
