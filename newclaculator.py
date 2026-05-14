@@ -90,7 +90,7 @@ button_layout = [
     ("4", 3, 0),  ("5", 3, 1), ("6", 3, 2), ("-", 3, 3),   ("%", 3, 4),   ("**", 2, 5),
     ("1", 2, 0),  ("2", 2, 1), ("3", 2, 2), ("+", 2, 3),   ("pi",2, 4),      
 ] 
-#("<-", 6, 3), 
+
 # Create and place the buttons
 for (text, row, col) in button_layout:
     button = tk.Button(parent, text=text, padx=20, pady=20, font=("Arial", 18),
